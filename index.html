@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyCast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">⛅</div>
+        <div>
+          <h1>SkyCast</h1>
+          <p>Weather made simple</p>
+        </div>
+      </div>
+      <div class="header-badge">Live Weather</div>
+    </header>
+
+    <!-- Hero & Search Section -->
+    <section class="hero">
+      <h2>Check the weather anywhere</h2>
+      <p class="subtitle">Search any city for current weather and a 5-day forecast.</p>
+
+      <div class="search-row">
+        <input type="text" id="cityInput" placeholder="Enter a city, e.g. Colombo">
+        <button id="searchBtn">Search</button>
+      </div>
+      <div id="statusMsg" class="status"></div>
+    </section>
+
+    <!-- Current Weather Card -->
+    <section id="currentCard" class="current-card hidden">
+      <h2 id="cityName"></h2>
+      <div class="current-grid">
+        <div class="stat">
+          <span class="stat-label">Temperature</span>
+          <span id="temp" class="stat-value"></span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Wind</span>
+          <span id="wind" class="stat-value"></span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Condition</span>
+          <span id="condition" class="stat-value"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5-Day Forecast -->
+    <section class="forecast-section">
+      <div class="section-heading">
+        <div>
+          <h2>5-Day Forecast</h2>
+          <p>Upcoming weather conditions</p>
+        </div>
+        <div class="heading-actions">
+          <button id="unitToggle" class="unit-toggle" type="button">Switch to &deg;F</button>
+          <div class="forecast-icon">🗓️</div>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Condition</th>
+              <th id="thMax">Max &deg;C</th>
+              <th id="thMin">Min &deg;C</th>
+              <th>Precipitation (mm)</th>
+            </tr>
+          </thead>
+          <tbody id="forecastBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span>⛅</span> <strong>SkyCast</strong>
+      </div>
+      <p>Simple, fast and reliable weather information.</p>
+      <div class="footer-bottom">
+        <span>© 2026 SkyCast</span>
+        <span>Powered by Open-Meteo</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
