@@ -7,22 +7,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to weather</a>
   <div class="page">
 
     <!-- Header -->
-    <header class="site-header">
-      <div class="brand">
-        <div class="logo">⛅</div>
-        <div>
-          <h1>SkyCast</h1>
-          <p>Weather made simple</p>
-        </div>
-      </div>
-      <div class="header-badge">Live Weather</div>
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="SkyCast home">
+        <span class="logo"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="25" cy="14" r="7" fill="currentColor" opacity=".75"/><path d="M25 3v2m0 18v2M14 14h2m18 0h2M17 6l2 2m12 12 2 2m0-16-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 31h18a6 6 0 0 0 0-12h-1a9 9 0 0 0-17-2 7 7 0 0 0 0 14Z" fill="white" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+        <span class="brand-copy">
+          <span class="brand-name">SkyCast</span>
+          <span class="brand-tagline">A clearer view of your day</span>
+        </span>
+      </a>
+      <nav class="header-nav" aria-label="Main navigation">
+        <a href="#search">Find a city</a>
+        <a href="#forecast">Forecast <span aria-hidden="true">&rarr;</span></a>
+      </nav>
     </header>
-
     <!-- Hero & Search Section -->
-    <section class="hero">
+    <main id="main-content">
+    <section class="hero" id="search">
       <h2>Check the weather anywhere</h2>
       <p class="subtitle">Search any city for current weather and a 5-day forecast.</p>
 
@@ -53,7 +57,7 @@
     </section>
 
     <!-- 5-Day Forecast -->
-    <section class="forecast-section">
+    <section class="forecast-section" id="forecast">
       <div class="section-heading">
         <div>
           <h2>5-Day Forecast</h2>
@@ -81,15 +85,32 @@
       </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="site-footer">
-      <div class="footer-brand">
-        <span>⛅</span> <strong>SkyCast</strong>
+      <div class="footer-main">
+        <div class="footer-intro">
+          <a class="footer-brand" href="#top" aria-label="SkyCast home">
+            <span class="footer-logo"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="25" cy="14" r="7" fill="currentColor" opacity=".75"/><path d="M25 3v2m0 18v2M14 14h2m18 0h2M17 6l2 2m12 12 2 2m0-16-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 31h18a6 6 0 0 0 0-12h-1a9 9 0 0 0-17-2 7 7 0 0 0 0 14Z" fill="white" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+            <strong>SkyCast</strong>
+          </a>
+          <p>A little weather insight.<br>A better plan for your day.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <span class="footer-label">Explore</span>
+          <a href="#search">Current weather</a>
+          <a href="#forecast">5-day forecast</a>
+        </nav>
+        <div class="footer-source">
+          <span class="footer-label">Weather data</span>
+          <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo <span aria-hidden="true">&nearr;</span><span class="sr-only"> (opens in a new tab)</span></a>
+          <p>Forecasts for wherever<br>your day takes you.</p>
+        </div>
       </div>
-      <p>Simple, fast and reliable weather information.</p>
       <div class="footer-bottom">
-        <span>© 2026 SkyCast</span>
-        <span>Powered by Open-Meteo</span>
+        <span>&copy; 2026 SkyCast</span>
+        <a href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
       </div>
     </footer>
 
